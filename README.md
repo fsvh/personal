@@ -2,31 +2,32 @@
 
 ###Update and upgrade system
 
-<pre>sudo apt-get update / sudo apt-get upgrade</pre>
+sudo apt-get update / sudo apt-get upgrade
 
-<pre>sudo apt-get install gparted deja-dup synaptic dconf-editor ubuntu-restricted-extras</pre>
+sudo apt-get install gparted deja-dup synaptic dconf-editor ubuntu-restricted-extras
 
-###Install Vocal
+##My favorites apps
 
-<pre>sudo apt-add-repository ppa:nathandyer/vocal-stable
-sudo apt-get update
-sudo apt-get install vocal</pre>
+####Install Vocal
 
-###Install Google-chrome
+>sudo apt-add-repository ppa:nathandyer/vocal-stable
+>sudo apt-get update
+>sudo apt-get install vocal
 
-<pre>wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
-sudo apt-get update 
-sudo apt-get install google-chrome-stable</pre>
+####Install Google-chrome
 
-###Install Synapse
+>wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | >sudo apt-key add - 
+>sudo apt-get update 
+>sudo apt-get install google-chrome-stable
 
-<pre>sudo apt-add-repository ppa:elementary-os/unstable-upstream
-sudo apt-get update
-sudo apt-get install indicator-synapse</pre>
+####Install Synapse
 
-###Install Plank themes
-<pre>
-git clone https://github.com/fsvh/plank-themes.git
-cd plank-themes
-./install.sh
-</pre>
+>sudo apt-add-repository ppa:elementary-os/unstable-upstream
+>sudo apt-get update
+>sudo apt-get install indicator-synapse
+
+####Install Plank themes
+
+>git clone https://github.com/fsvh/plank-themes.git
+>cd plank-themes
+>./install.sh
