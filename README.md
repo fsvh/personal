@@ -10,36 +10,36 @@ sudo apt-get install gparted deja-dup synaptic dconf-editor ubuntu-restricted-ex
 
 ####Install Vocal
 
-sudo apt-add-repository ppa:nathandyer/vocal-stable
+<pre>sudo apt-add-repository ppa:nathandyer/vocal-stable
 sudo apt-get update
-sudo apt-get install vocal
+sudo apt-get install vocal</pre>
 
 ####Install Google-chrome
 
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+<pre>wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
 sudo apt-get update 
-sudo apt-get install google-chrome-stable
+sudo apt-get install google-chrome-stable</pre>
 
 ###Install Popcorn Time
 
-sudo add-apt-repository ppa:webupd8team/popcorntime
+<pre>sudo add-apt-repository ppa:webupd8team/popcorntime
 sudo apt-get update
-sudo apt-get install popcorn-time
+sudo apt-get install popcorn-time</pre>
 
 ####Install Synapse
 
-sudo apt-add-repository ppa:elementary-os/unstable-upstream
+<pre>sudo apt-add-repository ppa:elementary-os/unstable-upstream
 sudo apt-get update
-sudo apt-get install indicator-synapse
+sudo apt-get install indicator-synapse</pre>
 
 ####Install Caffeine
 
-sudo add-apt-repository ppa:caffeine-developers/ppa
+<pre>sudo add-apt-repository ppa:caffeine-developers/ppa
 sudo apt-get update
-sudo apt-get install caffeine
+sudo apt-get install caffeine</pre>
 
 ####Install Plank themes
 
-git clone https://github.com/fsvh/plank-themes.git
+<pre>git clone https://github.com/fsvh/plank-themes.git
 cd plank-themes
-./install.sh
+./install.sh</pre>
