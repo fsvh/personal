@@ -2,7 +2,7 @@
 
 ###Update and upgrade system
 
-<pre>sudo apt-get update && sudo apt-get upgrade</pre>
+<pre>sudo apt-get update / sudo apt-get upgrade</pre>
 
 <pre>sudo apt-get install gparted deja-dup synaptic dconf-editor ubuntu-restricted-extras</pre>
 
@@ -24,14 +24,9 @@ sudo apt-get install google-chrome-stable</pre>
 sudo apt-get update
 sudo apt-get install indicator-synapse</pre>
 
-##Add plank themes
-
-###Installation
+###Install Plank themes
 <pre>
 git clone https://github.com/fsvh/plank-themes.git
 cd plank-themes
 ./install.sh
 </pre>
-
-
-
