@@ -8,17 +8,30 @@ sudo apt-get install gparted deja-dup synaptic dconf-editor ubuntu-restricted-ex
 
 ##My favorites apps
 
+####Install Google-chrome
+
+<pre>wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+sudo apt-get update 
+sudo apt-get install google-chrome-stable</pre>
+
+####Fix double Google Chrome icon in Plank
+
+<pre>sudo cp -a /usr/share/applications/google-chrome.desktop /usr/share/applications/google-chrome-stable.desktop</pre>
+
+<pre>google-chrome-stable</pre>
+
 ####Install Vocal
 
 <pre>sudo apt-add-repository ppa:nathandyer/vocal-stable
 sudo apt-get update
 sudo apt-get install vocal</pre>
 
-####Install Google-chrome
+####Install Inkscape
 
-<pre>wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
-sudo apt-get update 
-sudo apt-get install google-chrome-stable</pre>
+<pre>sudo apt-add-repository ppa:inkscape.dev/trunk
+sudo apt-get update
+sudo apt-get install inkscape-trunk</pre>
 
 ###Install Popcorn Time
 
@@ -48,7 +61,7 @@ sudo apt-get install indicator-synapse</pre>
 sudo apt-get update
 sudo apt-get install caffeine</pre>
 
-###Install Teaks
+###Install Tweaks
 
 <pre>sudo add-apt-repository ppa:mpstark/elementary-tweaks-daily
 sudo apt-get update
@@ -65,11 +78,3 @@ cd plank-themes
 <pre>git clone https://github.com/cybre/megasync-elementary.git
 cd megasync-elementary
 ./install.sh</pre>
-
-####Fix double Google Chrome icon in Plank
-
-<pre>sudo scratch-text-editor /usr/share/applications/google-chrome.desktop</pre>
-
-Paste under [Desktop Entry], [NewWindow Shortcut Group], [NewIncognito Shortcut Group]
-
-<pre>StartupWMClass=Google-chrome-stable</pre>
