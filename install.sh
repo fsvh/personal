@@ -9,7 +9,7 @@ if [[ $yn =~ ^[Yy]$ ]] || [[ $yn == "" ]]; then
     sudo apt-get -y upgrade
 
     echo "installing some cool things"
-    sudo apt-get install gparted deja-dup synaptic dconf-editor ubuntu-restricted-extras
+    sudo apt-get install gparted deja-dup synaptic dconf-editor ubuntu-restricted-extras zsh
    
     echo "Adding repositories"
     sudo add-apt-repository --yes ppa:nathandyer/vocal-stable
@@ -28,13 +28,24 @@ if [[ $yn =~ ^[Yy]$ ]] || [[ $yn == "" ]]; then
     echo "Upgrading packages"
     sudo apt-get -y install vocal inkscape-trunk popcorn-time brackets indicator-synapse caffeine elementary-tweaks google-chrome-stable
     
+    echo "Installing Oh my Zsh"
+    chsh -s /bin/zsh
+    wget --no-check-certificate http://install.ohmyz.sh -O - | sh
+    
     echo "Installing plank themes"
     git clone https://github.com/fsvh/plank-themes.git
     cd plank-themes
     ./install.sh
     cd ..
     rm -rf plank-themes/
-
+    
+    echo "Installing my own mega icons"
+    git clone https://github.com/fsvh/megasync-elementary.git
+    cd megasync-elementary
+    ./install.sh
+    cd ..
+    rm -rf megasync-elementary/
+   
     echo "Fix double Google Chrome icon in Plank"
     sudo cp -a /usr/share/applications/google-chrome.desktop /usr/share/applications/google-chrome-stable.desktop
     google-chrome-stable
