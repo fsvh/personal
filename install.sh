@@ -19,6 +19,8 @@ if [[ $yn =~ ^[Yy]$ ]] || [[ $yn == "" ]]; then
     sudo add-apt-repository --yes ppa:elementary-os/unstable-upstream
     sudo add-apt-repository --yes ppa:caffeine-developers/ppa
     sudo add-apt-repository --yes ppa:mpstark/elementary-tweaks-daily
+    sudo add-apt-repository ppa:atareao/telegram
+    sudo add-apt-repository ppa:nilarimogard/webupd8
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
     sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
   
@@ -26,7 +28,7 @@ if [[ $yn =~ ^[Yy]$ ]] || [[ $yn == "" ]]; then
     sudo apt-get -y update
     
     echo "Upgrading packages"
-    sudo apt-get -y install vocal inkscape-trunk popcorn-time brackets indicator-synapse caffeine elementary-tweaks google-chrome-stable
+    sudo apt-get -y install vocal inkscape-trunk popcorn-time brackets indicator-synapse caffeine elementary-tweaks youtube-dlg telegram google-chrome-stable
     
     echo "Installing Oh my Zsh"
     chsh -s /bin/zsh
