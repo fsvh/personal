@@ -9,7 +9,7 @@ if [[ $yn =~ ^[Yy]$ ]] || [[ $yn == "" ]]; then
     sudo apt-get -y upgrade
 
     echo "installing some cool things"
-    sudo apt-get install gparted deja-dup synaptic dconf-editor ubuntu-restricted-extras zsh
+    sudo apt-get install deja-dup synaptic ubuntu-restricted-extras zsh
    
     echo "Adding repositories"
     sudo add-apt-repository --yes ppa:nathandyer/vocal-stable
