@@ -9,18 +9,17 @@ if [[ $yn =~ ^[Yy]$ ]] || [[ $yn == "" ]]; then
     sudo apt-get -y upgrade
 
     echo "installing some cool things"
-    sudo apt-get install deja-dup synaptic ubuntu-restricted-extras zsh
+    sudo apt-get install deja-dup dconf-editor ubuntu-restricted-extras zsh git easytag
    
     echo "Adding repositories"
     sudo add-apt-repository --yes ppa:nathandyer/vocal-stable
     sudo add-apt-repository --yes ppa:inkscape.dev/trunk
     sudo add-apt-repository --yes ppa:webupd8team/popcorntime
-    sudo add-apt-repository --yes ppa:webupd8team/brackets
     sudo add-apt-repository --yes ppa:elementary-os/unstable-upstream
     sudo add-apt-repository --yes ppa:caffeine-developers/ppa
     sudo add-apt-repository --yes ppa:mpstark/elementary-tweaks-daily
-    sudo add-apt-repository ppa:atareao/telegram
-    sudo add-apt-repository ppa:nilarimogard/webupd8
+    sudo add-apt-repository --yes ppa:atareao/telegram
+    sudo add-apt-repository --yes ppa:nilarimogard/webupd8
     wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
     sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
   
@@ -51,6 +50,5 @@ if [[ $yn =~ ^[Yy]$ ]] || [[ $yn == "" ]]; then
     echo "Fix double Google Chrome icon in Plank"
     sudo cp -a /usr/share/applications/google-chrome.desktop /usr/share/applications/google-chrome-stable.desktop
     google-chrome-stable
-    done
 
 fi
